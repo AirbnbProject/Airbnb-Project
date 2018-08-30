@@ -31,7 +31,7 @@ deploy:
     secure: "$AWS_SECRET_KEY"
   region: ap-northeast-2
   app: Airbnb-Project2
-  env: Airbnb-Project-dev2
+  env: Airbnb-Project2-dev
   bucket_name: fc-airbnb-project
   skip_cleanup: true
   on:
