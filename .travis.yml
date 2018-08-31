@@ -1,4 +1,9 @@
 language: python
+sudo: false
+cache:
+  apt: true
+  directory:
+    - $HOME/.cache/pip
 python:
 - 3.6
 services:
