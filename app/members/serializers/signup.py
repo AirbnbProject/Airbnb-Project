@@ -9,7 +9,7 @@ from django.utils.http import urlsafe_base64_encode
 from rest_framework import serializers
 
 from config.settings import base
-from members.tasks import send_mail
+# from members.tasks import send_mail
 
 from ..tokens import account_activation_token
 
