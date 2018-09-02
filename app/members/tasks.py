@@ -7,15 +7,17 @@ from django.utils.http import urlsafe_base64_encode
 from config import celery_app
 from members.tokens import account_activation_token
 
+
 User = get_user_model()
 
 @celery_app.task
-def send_mail():
-    user = User.objects.last()
+def send_mail(pk):
+
+    user = User.objects.get(pk=pk)
 
     message = render_to_string('account_activate_email.html', {
         'user': user,
-        'domain': 'localhost:8000',
+        'domain': 'leesoo.kr',
         'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode('utf-8'),
         'token': account_activation_token.make_token(user)
     })
