@@ -1,7 +1,7 @@
 -i https://pypi.org/simple
 amqp==2.3.2
 appnope==0.1.0; sys_platform == 'darwin'
-arrow==0.12.1
+arrow==0.15.1
 backcall==0.1.0
 billiard==3.5.0.4
 boto3==1.8.1
